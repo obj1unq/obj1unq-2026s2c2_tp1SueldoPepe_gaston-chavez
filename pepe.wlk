@@ -16,7 +16,7 @@ object pepe {
       return self.sueldoNeto() + bonoResultado.monto(self) + bonoPresentismo.monto(self) /*sueldo = SN + BR + BP*/
     }
 
-    method cantidadDeFaltas(_faltas) { /*con un setter cambio la cantidad de faltas */
+    method cambiarCantidadDeFaltas(_faltas) { /*con un setter cambio la cantidad de faltas */
       cantidadDeFaltas = _faltas
     }
 
