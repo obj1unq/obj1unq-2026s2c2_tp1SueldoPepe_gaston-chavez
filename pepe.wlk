@@ -97,3 +97,99 @@ object bonoPresentimoDemagogico {
   }
 }
 
+object moria {
+  var categoria = gerente
+  var bonoResultado = bonoNulo
+
+  method sueldoNeto() {
+    return categoria.sueldoNeto() * 1.3
+  }
+
+  method sueldoo() {
+    return self.sueldoNeto() + bonoResultado.monto(self)
+  }
+
+  method cambiarBonoR(_bonoR) { /*con un setter cambio el bono resultado */
+      bonoResultado = _bonoR
+  }
+
+  method cambiarCategoria(_categoria) { /*con un setter cambio la categoria que tendra el empleado(pepe) */
+      categoria = _categoria
+  }
+}
+
+object vendedor{
+  var aumentoPorMuchasVentas = false
+  method sueldoNeto() {
+    return if (aumentoPorMuchasVentas){
+      16000 * 1.25
+    }
+    else {
+      16000
+    }
+  }
+
+  method activarAumentoPorMuchasVentas() {
+    aumentoPorMuchasVentas = true
+  }
+
+  method desactivarAumentoPOrMUchasVetas() {
+    aumentoPorMuchasVentas = true
+  }
+}
+
+object medioTiempo{
+  var categoria =  gerente
+
+  method categoriaBase(_categoria) {
+    categoria = _categoria
+  }
+
+  method sueldoNeto(){
+    return categoria.sueldoNeto() / 2
+  }
+}
+
+object roque{
+  var bonoResultado = bonoNulo
+
+  method sueldo() {
+    return self.sueldoNeto() + bonoResultado.monto(self) + 9000
+  }
+
+  method sueldoNeto() {
+    return 28000
+  }
+
+  method cambiarBonoR(_bonoR) { /*con un setter cambio el bono resultado */
+      bonoResultado = _bonoR
+  }
+}
+
+object ernesto {
+  var sueldoNeto = 0
+  var bonoPresentismo = bonoNulo
+
+  method cambiarSueldoAlDe(empleado) {
+    sueldoNeto = empleado.sueldoNeto()
+  }
+
+  method sueldoNeto(){
+    return sueldoNeto
+  } 
+
+  method sueldo() {
+    return self.sueldoNeto() + bonoPresentismo.monto(self)
+  }
+
+  method cambiarBonoP(_bonoP) { /*con un setter cambio el bono presentismo */
+      bonoPresentismo = _bonoP
+  }
+
+  method cantidadDeFaltas() {
+    return 0
+  }
+}
+
+
+
