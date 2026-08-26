@@ -139,7 +139,7 @@ object vendedor{
 }
 
 object medioTiempo{
-  var categoria =  gerente
+  var categoria = gerente
 
   method categoriaBase(_categoria) {
     categoria = _categoria
