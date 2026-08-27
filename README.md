@@ -99,6 +99,7 @@ Agregar dos personas más, según lo que se detalla a continuación.
 	Verificar que el sueldo de Pepe es 11500, el de Roque es 37800, y el de Ernesto es 10100.
 	
 	Dibujar el diagrama de referencias que queda al final de este test. Recordar que deben incluirse los objetos definidos por nosotros, _y también_ los números y booleanos.
+	-Link diagrama de referencias (no se si esta correcto el diagrama!)  https://imgur.com/a/hgDQlP3
 	
 	
 ## Ejercicios de reflexión y documentación
@@ -107,6 +108,20 @@ Agregar dos personas más, según lo que se detalla a continuación.
   - el **tipo** de los objetos polimórficos
   - los mensajes que componen ese tipo
   - los **emisores** de los mensajes polimórficos
+ 
+    -Respuesta:
+    -hay 3 tipos polimorficos con sus objetos,mensaje y emisor:
+    el tipo categoria -> cadete, gerente, vendedor, medioTiempo -> el mensaje que tienen estos cuatro objetos, es el sueldoNeto() -> el emisor es pepe, moria, ernesto, roque
+  	el tipo bonoResultado -> bonoPorcentaje, bonoMontoFijo, bonoNulo -> el mensaje que tienen estos tres objetos, es el monto(empleado) -> los emisores son pepe,moria, roque
+    el tipo bonoPresentismo -> bonoPresentismoNormal, bonoPresentismoAjuste, bonoPresentismoDemagogico, bonoNulo -> el mensaje que tienen estos cuatro objetos, es el monto(empleado) -> los emisores son pepe,roque
     
 - Dibujar un diagrama estático donde se vea la relación entre los objetos y los tipos polimórficos
+- Link diagrama estatico (no se si esta correcto el diagrama!) https://imgur.com/a/ancUXQw
+
 - Encontrar (en toda la solución) un mensaje que sea una orden y otro que sea una consulta
+- Respuesta: mensaje de Orden: method activarAumentoPorMuchasVentas() {
+      aumentoPorMuchasVentas = true
+    }
+-mensaje de consulta: method sueldoNeto() { /*retorno el saldo neto segun la categoria que tenga el empleadpo(pepe) */
+      return categoria.sueldoNeto()
+    }
